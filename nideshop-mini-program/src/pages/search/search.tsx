@@ -104,6 +104,19 @@ const Search = (props: SearchProps) => {
     })
   }
 
+  /** 选中联想关键词列表中某个关键词 */
+  const onSelectedHelp = (name: string) => {
+    // 更新搜索框的值
+    setSearchValue(name)
+    // 更新是否展示帮助数据
+    setShowSearchHelper(false)
+    // 更新查询商品列表的入参
+    setTagQuery({
+      ...tagQuery,
+      keyword: name
+    })
+  }
+
   /** 切换商品列表展示方式的tab引起的回调函数 */
   const onChangeShowTypeTab = (type: string) => {
     console.log('onChangeShowTypeTab', type)
@@ -200,6 +213,7 @@ const Search = (props: SearchProps) => {
         className="search-help-list"
         key={item}
         hoverClass="navigator-hover"
+        onClick={() => { onSelectedHelp(item) }}
       >{item}</View>)}
     </View>
     }
