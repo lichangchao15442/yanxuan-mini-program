@@ -195,22 +195,6 @@ const Search = (props: SearchProps) => {
         </View>
       </View>
     }
-    {/* <View className='except-search-input'>
-        <View className="search-hot">
-          <View className="search-hot-title">
-            <Text>热门搜索</Text>
-          </View>
-          <View className="search-hot-keywords">
-            {hotKeywordList.map(item => <AtTag
-              className="search-hot-keyword"
-              key={item.keyword}
-              name={item.keyword}
-              active={selectedHotKeyword === item.keyword}
-              onClick={onChangeSelectedKeyword}
-            >{item.keyword}</AtTag>)}
-          </View>
-        </View>
-    </View> */}
     {searchValue && showSearchHelper && <View className="search-help-lists except-search-input">
       {helpKeywords.map(item => <View
         className="search-help-list"
@@ -251,6 +235,11 @@ const Search = (props: SearchProps) => {
           </View>
         </View>)}
       </View>
+    </View>
+    }
+    {searchValue && !showSearchHelper && goodsList.length === 0 && <View className='except-search-input search-result-empty'>
+      <Image className='search-result-empty-icon' src='http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/noSearchResult-7572a94f32.png' />
+      <View className='search-result-empty-text'>您寻找的商品还未上架</View>
     </View>}
   </View>
 }

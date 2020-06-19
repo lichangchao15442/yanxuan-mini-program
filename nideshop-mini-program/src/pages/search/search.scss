@@ -130,3 +130,17 @@
     border: 1px solid #b4282d;
   }
 }
+
+.search-result-empty {
+  padding-top: 300px;
+  text-align: center;
+  .search-result-empty-icon {
+    width: 240px;
+    height: 240px;
+    margin: 0 auto;
+  }
+  .search-result-empty-text {
+    font-size: 28px;
+    color: #999;
+  }
+}

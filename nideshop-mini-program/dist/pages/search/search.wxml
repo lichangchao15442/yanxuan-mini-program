@@ -1,20 +1,20 @@
 <block wx:if="{{$taroCompReady}}">
     <view class="container">
-        <at-search-bar compid="{{$compid__9}}"></at-search-bar>
+        <at-search-bar compid="{{$compid__89}}"></at-search-bar>
         <block wx:if="{{!searchValue}}">
             <view class="except-search-input">
                 <view class="search-hot">
                     <view class="search-hot-title"><text>历史搜索</text>
                     </view>
                     <view class="search-hot-keywords">
-                        <at-tag wx:key="$original" wx:for="{{loopArray19}}" wx:for-item="item" wx:for-index="__index2" compid="{{item.$compid__7}}">{{item.$original}}</at-tag>
+                        <at-tag wx:key="$original" wx:for="{{loopArray99}}" wx:for-item="item" wx:for-index="__index2" compid="{{item.$compid__87}}">{{item.$original}}</at-tag>
                     </view>
                 </view>
                 <view class="search-hot">
                     <view class="search-hot-title"><text>热门搜索</text>
                     </view>
                     <view class="search-hot-keywords">
-                        <at-tag wx:key="keyword" wx:for="{{loopArray20}}" wx:for-item="item" wx:for-index="__index3" compid="{{item.$compid__8}}">{{item.$original.keyword}}</at-tag>
+                        <at-tag wx:key="keyword" wx:for="{{loopArray100}}" wx:for-item="item" wx:for-index="__index3" compid="{{item.$compid__88}}">{{item.$original.keyword}}</at-tag>
                     </view>
                 </view>
             </view>
@@ -30,23 +30,29 @@
                     <view class="show-types-tab"><text class="{{currentShowType === 'comprehensive' ? 'global-text-red' : ''}}" bindtap="anonymousFunc4">综合</text>
                         <view class="tab-price"><text class="{{currentShowType === 'priceAsc' || currentShowType === 'priceDesc' ? 'global-text-red' : ''}}" bindtap="anonymousFunc5">价格</text>
                             <view class="tab-price-icon">
-                                <at-icon compid="{{$compid__10}}"></at-icon>
-                                <at-icon compid="{{$compid__11}}"></at-icon>
+                                <at-icon compid="{{$compid__90}}"></at-icon>
+                                <at-icon compid="{{$compid__91}}"></at-icon>
                             </view>
                         </view><text bindtap="anonymousFunc8">分类</text>
                     </view>
                     <block wx:if="{{showCategoryTabs}}">
-                        <view class="category-tabs"><text class="{{currentCategoryTab === item.$original.id ? 'active' : ''}}" wx:key="id" bindtap="anonymousFunc9" wx:for="{{loopArray22}}" wx:for-item="item" wx:for-index="__index9" data-e-tap-so="this" data-e-tap-a-a="{{item._$indexKey3}}">{{item.$original.name}}</text>
+                        <view class="category-tabs"><text class="{{currentCategoryTab === item.$original.id ? 'active' : ''}}" wx:key="id" bindtap="anonymousFunc9" wx:for="{{loopArray102}}" wx:for-item="item" wx:for-index="__index9" data-e-tap-so="this" data-e-tap-a-a="{{item._$indexKey3}}">{{item.$original.name}}</text>
                         </view>
                     </block>
                 </view>
                 <view class="goods-list">
-                    <view class="goods-item" wx:for="{{loopArray23}}" wx:for-item="item" wx:for-index="_anonIdx4">
+                    <view class="goods-item" wx:for="{{loopArray103}}" wx:for-item="item" wx:for-index="_anonIdx4">
                         <image src="{{item.$original.listPicUrl}}"></image>
                         <view class="global-goods-list-item"><text>{{item.$original.name}}</text><text class="goods-price">¥ {{item.$loopState__temp4}}</text>
                         </view>
                     </view>
                 </view>
+            </view>
+        </block>
+        <block wx:if="{{searchValue && !showSearchHelper && goodsList.length === 0}}">
+            <view class="except-search-input search-result-empty">
+                <image class="search-result-empty-icon" src="http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/noSearchResult-7572a94f32.png"></image>
+                <view class="search-result-empty-text">您寻找的商品还未上架</view>
             </view>
         </block>
     </view>

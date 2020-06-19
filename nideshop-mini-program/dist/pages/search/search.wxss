@@ -105,3 +105,16 @@
   color: #b4282d;
   border: 1rpx solid #b4282d;
 }
+.search-result-empty {
+  padding-top: 300rpx;
+  text-align: center;
+}
+.search-result-empty .search-result-empty-icon {
+  width: 240rpx;
+  height: 240rpx;
+  margin: 0 auto;
+}
+.search-result-empty .search-result-empty-text {
+  font-size: 28rpx;
+  color: #999;
+}
