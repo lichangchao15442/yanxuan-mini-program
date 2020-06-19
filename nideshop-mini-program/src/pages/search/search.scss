@@ -1,0 +1,132 @@
+.my-at-search-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(0, 0, 0, .15);
+  margin-bottom: 100rpx;
+
+  .at-search-bar__action {
+    background-color: #fff;
+    color: #333;
+  }
+}
+
+.except-search-input {
+  position: relative;
+  top: 76px;
+}
+.goods-fixed {
+  position: fixed;
+  top: 95px;
+  width: 100%;
+  z-index: 10000;
+}
+
+.search-hot {
+  padding: 20px;
+  background-color: #fff;
+
+  .search-hot-title {
+    margin-bottom: 20px;
+
+    text {
+      font-size: 29px;
+    }
+  }
+
+  .search-hot-keywords {
+
+    .search-hot-keyword {
+      border: 1px solid #999;
+      background-color: #fff;
+      margin-right: 20px;
+      margin-bottom: 40px;
+    }
+
+    .at-tag--active {
+      color: #b4282d;
+      border: 1px solid #b4282d;
+    }
+  }
+}
+
+.search-help-lists {
+  padding: 0 24px;
+  background-color: #fff;
+
+  .search-help-list {
+    font-size: 24px;
+    height: 80px;
+    line-height: 80px;
+  }
+}
+
+.search-result {
+  .goods-list {
+    position: relative;
+    top: 178px;
+    display: flex;
+    flex-wrap: wrap;
+
+    .goods-item {
+      width: 365px;
+      background-color: #fff;
+      margin-right: 5px;
+      margin-bottom: 5px;
+      text-align: center;
+
+      image {
+        width: 300px;
+        height: 300px;
+      }
+    }
+  }
+
+}
+
+.show-types-tab {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  font-size: 30px;
+  padding: 20px 0;
+  border-bottom: 1px solid #d9d9d9;
+  border-top: 1px solid #d9d9d9;
+
+  .tab-price {
+    display: flex;
+
+    .tab-price-icon {
+      display: flex;
+      flex-direction: column;
+      margin-top: -6px;
+      margin-left: 10px;
+
+      at-icon {
+        height: 15px;
+      }
+    }
+  }
+}
+
+.category-tabs {
+  background: #fff;
+  border-bottom: 1px solid #d9d9d9;
+  padding: 40px;
+
+  text {
+    display: inline-block;
+    height: 54px;
+    line-height: 54px;
+    font-size: 28px;
+    border: 1px solid #666;
+    padding: 0 20px;
+    margin-right: 40px
+  }
+
+  text.active {
+    color: #b4282d;
+    border: 1px solid #b4282d;
+  }
+}

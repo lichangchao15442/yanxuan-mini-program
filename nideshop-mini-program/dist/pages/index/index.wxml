@@ -1,0 +1,76 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="container">
+        <navigator url="/pages/search/search">
+            <at-search-bar compid="{{$compid__6}}"></at-search-bar>
+        </navigator>
+        <swiper style="height: 400rpx" indicator-color="#999" indicator-active-color="#333" circular="{{true}}" indicator-dots="{{true}}" autoplay="{{true}}">
+            <swiper-item class="swiper-item" wx:for="{{banner}}" wx:for-item="item" wx:for-index="_anonIdx2">
+                <image wx:key="id" src="{{item.imageUrl}}" mode="aspectFit"></image>
+            </swiper-item>
+        </swiper>
+        <view class="menu">
+            <navigator wx:key="id" wx:for="{{channel}}" wx:for-item="item" wx:for-index="_anonIdx4">
+                <image src="{{item.iconUrl}}"></image><text>{{item.name}}</text>
+            </navigator>
+        </view>
+        <view class="selection m-brand">
+            <view class="selection-title"><text>品牌制造商直供</text>
+            </view>
+            <view class="at-row at-row--wrap brands">
+                <view wx:key="id" class="at-col-6 brand" wx:for="{{brandList}}" wx:for-item="item" wx:for-index="_anonIdx6">
+                    <image src="{{item.newPicUrl}}"></image>
+                    <view class="brand-text"><text class="brand-text-name">{{item.name}}</text><text class="brand-text-price">{{item.floorPrice}}<text>元起</text></text>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="selection m-new">
+            <view class="selection-title"><text>周一周四·新品首发</text>
+            </view>
+            <view class="at-row at-row--wrap news">
+                <view wx:key="id" class="at-col-6 new" wx:for="{{loopArray15}}" wx:for-item="item" wx:for-index="_anonIdx8">
+                    <image src="{{item.$original.listPicUrl}}"></image>
+                    <view class="new-text"><text class="new-text-name">{{item.$original.name}}</text><text class="new-text-price">¥{{item.$loopState__temp3}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="selection m-hot">
+            <view class="selection-title"><text>人气推荐</text>
+            </view>
+            <view class="hots">
+                <view class="hot" wx:key="id" wx:for="{{loopArray16}}" wx:for-item="item" wx:for-index="_anonIdx10">
+                    <image src="{{item.$original.listPicUrl}}"></image>
+                    <view class="hot-text"><text class="hot-text-name">{{item.$original.name}}</text><text class="hot-text-brief">{{item.$original.goodsBrief}}</text><text class="hot-text-price">¥{{item.$loopState__temp5}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="selection m-topic">
+            <view class="selection-title"><text>专题精选</text>
+            </view>
+            <swiper style="height: 530rpx" autoplay="{{true}}" circular="{{true}}">
+                <swiper-item class="topic" wx:key="id" wx:for="{{topicList}}" wx:for-item="item" wx:for-index="_anonIdx12">
+                    <image src="{{item.scenePicUrl}}" mode="aspectFill"></image>
+                    <view class="topic-text">
+                        <view><text class="topic-title">{{item.title}}</text><text class="topic-price">¥{{item.priceInfo}}元起</text>
+                        </view><text class="topic-desc text-ellipsis">{{item.subtitle}}</text>
+                    </view>
+                </swiper-item>
+            </swiper>
+        </view>
+        <view>
+            <view class="selection m-category" wx:key="id" wx:for="{{loopArray18}}" wx:for-item="category" wx:for-index="_anonIdx16">
+                <view class="selection-title"><text>{{category.$original.name}}</text>
+                </view>
+                <view class="at-row at-row--wrap categorys">
+                    <view wx:key="id" class="at-col-6 category" wx:for="{{category.$anonymousCallee__1}}" wx:for-item="item" wx:for-index="_anonIdx14">
+                        <image src="{{item.$original.listPicUrl}}"></image>
+                        <view class="category-text"><text class="category-text-name text-ellipsis">{{item.$original.name}}</text><text class="category-text-price">¥{{item.$loopState__temp7}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</block>

@@ -1,0 +1,107 @@
+.my-at-search-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1rpx solid rgba(0, 0, 0, 0.15);
+  margin-bottom: 100rpx;
+}
+.my-at-search-bar .at-search-bar__action {
+  background-color: #fff;
+  color: #333;
+}
+.except-search-input {
+  position: relative;
+  top: 76rpx;
+}
+.goods-fixed {
+  position: fixed;
+  top: 95rpx;
+  width: 100%;
+  z-index: 10000;
+}
+.search-hot {
+  padding: 20rpx;
+  background-color: #fff;
+}
+.search-hot .search-hot-title {
+  margin-bottom: 20rpx;
+}
+.search-hot .search-hot-title text {
+  font-size: 29rpx;
+}
+.search-hot .search-hot-keywords .search-hot-keyword {
+  border: 1rpx solid #999;
+  background-color: #fff;
+  margin-right: 20rpx;
+  margin-bottom: 40rpx;
+}
+.search-hot .search-hot-keywords .at-tag--active {
+  color: #b4282d;
+  border: 1rpx solid #b4282d;
+}
+.search-help-lists {
+  padding: 0 24rpx;
+  background-color: #fff;
+}
+.search-help-lists .search-help-list {
+  font-size: 24rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.search-result .goods-list {
+  position: relative;
+  top: 178rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+.search-result .goods-list .goods-item {
+  width: 365rpx;
+  background-color: #fff;
+  margin-right: 5rpx;
+  margin-bottom: 5rpx;
+  text-align: center;
+}
+.search-result .goods-list .goods-item image {
+  width: 300rpx;
+  height: 300rpx;
+}
+.show-types-tab {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  font-size: 30rpx;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #d9d9d9;
+  border-top: 1rpx solid #d9d9d9;
+}
+.show-types-tab .tab-price {
+  display: flex;
+}
+.show-types-tab .tab-price .tab-price-icon {
+  display: flex;
+  flex-direction: column;
+  margin-top: -6rpx;
+  margin-left: 10rpx;
+}
+.show-types-tab .tab-price .tab-price-icon at-icon {
+  height: 15rpx;
+}
+.category-tabs {
+  background: #fff;
+  border-bottom: 1rpx solid #d9d9d9;
+  padding: 40rpx;
+}
+.category-tabs text {
+  display: inline-block;
+  height: 54rpx;
+  line-height: 54rpx;
+  font-size: 28rpx;
+  border: 1rpx solid #666;
+  padding: 0 20rpx;
+  margin-right: 40rpx;
+}
+.category-tabs text.active {
+  color: #b4282d;
+  border: 1rpx solid #b4282d;
+}

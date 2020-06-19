@@ -1,0 +1,160 @@
+.swiper-item image {
+  width: 100%;
+  height: 417rpx;
+}
+.menu {
+  height: 181rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff;
+}
+.menu image {
+  width: 58rpx;
+  height: 58rpx;
+  margin-bottom: 20rpx;
+  display: block;
+}
+.menu text {
+  font-size: 24rpx;
+  color: #333;
+}
+.selection {
+  background-color: #fff;
+  color: #333;
+}
+.selection .selection-title {
+  padding: 40rpx;
+  text-align: center;
+}
+.selection .selection-title text {
+  font-size: 33rpx;
+}
+.m-brand {
+  margin-top: 20rpx;
+}
+.m-brand .brands .brand {
+  border-top: 1rpx solid #fff;
+  height: 251rpx;
+  position: relative;
+}
+.m-brand .brands .brand image {
+  width: 374rpx;
+  height: 251rpx;
+}
+.m-brand .brands .brand .brand-text {
+  position: absolute;
+  top: 30rpx;
+  left: 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+.m-brand .brands .brand .brand-text .brand-text-name {
+  font-size: 33rpx;
+}
+.m-brand .brands .brand .brand-text .brand-text-price {
+  font-size: 25rpx;
+  color: #999;
+}
+.m-new .news {
+  padding-bottom: 40rpx;
+}
+.m-new .news .new image {
+  width: 302rpx;
+  height: 302rpx;
+}
+.m-new .news .new .new-text {
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.m-new .news .new .new-text .new-text-price {
+  font-size: 30rpx;
+  color: #b4282d;
+}
+.m-hot {
+  margin-top: 20rpx;
+}
+.m-hot .hots {
+  padding: 0 20rpx;
+}
+.m-hot .hots .hot {
+  display: flex;
+  text-align: center;
+  border-top: 1rpx solid #d9d9d9;
+}
+.m-hot .hots .hot image {
+  width: 240rpx;
+  height: 240rpx;
+  margin: 12rpx 12rpx 0 0;
+}
+.m-hot .hots .hot .hot-text {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.m-hot .hots .hot .hot-text text {
+  margin-bottom: 15rpx;
+}
+.m-hot .hots .hot .hot-text .hot-text-name {
+  font-size: 30rpx;
+}
+.m-hot .hots .hot .hot-text .hot-text-brief {
+  font-size: 25rpx;
+  color: #999;
+}
+.m-hot .hots .hot .hot-text .hot-text-price {
+  font-size: 33rpx;
+  color: #b4282d;
+}
+.m-topic {
+  margin-top: 20rpx;
+  padding: 0 20rpx;
+}
+.m-topic .topic image {
+  height: 387.5rpx;
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+.m-topic .topic .topic-text .topic-title {
+  font-size: 29rpx;
+}
+.m-topic .topic .topic-text .topic-price {
+  font-size: 30rpx;
+  color: #b4282d;
+  margin-left: 20.8rpx;
+}
+.m-topic .topic .topic-text .topic-desc {
+  display: block;
+  font-size: 24rpx;
+  color: #999;
+}
+.m-category {
+  margin-top: 20rpx;
+}
+.m-category .selection-title text {
+  font-size: 29rpx;
+}
+.m-category .categorys {
+  padding: 0 20rpx;
+}
+.m-category .categorys .category {
+  margin-bottom: 30rpx;
+}
+.m-category .categorys .category image {
+  width: 345rpx;
+  height: 345rpx;
+  background-color: #f8f8f8;
+  margin-bottom: 10rpx;
+}
+.m-category .categorys .category .category-text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 30rpx;
+}
+.m-category .categorys .category .category-text .category-text-price {
+  color: #b4282d;
+}

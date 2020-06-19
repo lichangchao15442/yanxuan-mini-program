@@ -1,0 +1,39 @@
+@import "~taro-ui/dist/style/index.scss";
+
+.container {
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+  font-family: PingFangSC-Light, helvetica, 'Heiti SC';
+  min-height: 100vh;
+  height: 100%;
+}
+
+// 字数过长显示省略号
+.text-ellipsis {
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+// 全局商品列表样式
+.global-goods-list-item {
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #333;
+  text {
+    padding-bottom: 20px;
+  }
+
+  .goods-price {
+    font-size: 30rpx;
+    color: #b4282d;
+  }
+}
+
+// 全局红色字体样式
+.global-text-red {
+  color: #b4282d ;
+}
