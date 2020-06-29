@@ -114,12 +114,25 @@ class HomeController extends Controller {
       whereMap.name = {
         [Op.like]: '%' + keyword + '%'
       }
-      // 添加到历史搜索
-      await ctx.model.SearchHistory.create({
-        keyword,
-        userId: 1, // TODO: 当前登录用户的ID，暂且写死
-        addTime: new Date()
+      // 添加到历史搜索（去重，重复的只更新时间）
+      const hasKeyword = await ctx.model.SearchHistory.findOne({
+        where: {
+          keyword
+        }
       })
+      if (hasKeyword) {
+        // 更新添加时间
+        hasKeyword.update({
+          addTime: new Date()
+        })
+      } else {
+        // 插入新数据
+        await ctx.model.SearchHistory.create({
+          keyword,
+          userId: 1, // TODO: 当前登录用户的ID，暂且写死
+          addTime: new Date()
+        })
+      }
     };
 
     // 排序条件

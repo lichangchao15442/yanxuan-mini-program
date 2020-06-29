@@ -28,7 +28,8 @@ class HomeController extends Controller {
 
     let historyKeywordList = await ctx.model.SearchHistory.findAll({
       limit:10,
-      attributes: [Sequelize.fn('DISTINCT', Sequelize.col('keyword')) ,'keyword'],
+      attributes: ['keyword','addTime'],
+      order:[['addTime', 'desc']],
       where: {
         userId: 1, //TODO: 当前登录用户的ID，暂且写死
       },
