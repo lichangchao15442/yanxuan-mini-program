@@ -5,15 +5,21 @@
 .menu {
   height: 181rpx;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: #fff;
+}
+.menu .menu-item {
+  flex: 1;
+  padding: 20rpx 0;
+  text-align: center;
 }
 .menu image {
   width: 58rpx;
   height: 58rpx;
   margin-bottom: 20rpx;
   display: block;
+  margin: 0 auto;
 }
 .menu text {
   font-size: 24rpx;

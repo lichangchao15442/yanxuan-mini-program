@@ -8,4 +8,5 @@ export default (app: Application) => {
   router.get('/search/helper', controller.search.helper); // 获取搜索帮助的数据
   router.get('/goods/count', controller.goods.getGoodsCount); // 获取商品总数
   router.get('/goods/list', controller.goods.list); // 获取搜索得到的商品列表
+  router.get('/goods/category', controller.goods.category); // 获取获得分类数据
 };

@@ -105,7 +105,7 @@ class HomeController extends Controller {
     const { keyword,
       page, size,
       sort, order,
-      // categoryId
+      categoryId
     } = ctx.query;
     
     // 查询条件
@@ -183,6 +183,11 @@ class HomeController extends Controller {
     }
 
     // TODO: 加入分类条件
+    if (hasValue(categoryId)) {
+      whereMap.categoryId = {
+        [Op.in]: await ctx.service.category.getCategoryWhereIn(toInt(categoryId))
+      }
+    }
 
     const goodsData = await ctx.model.Goods.findAll({
       limit: toInt(size),
@@ -254,6 +259,32 @@ class HomeController extends Controller {
     ctx.body = {
       code: '1',
       data: goodsCount.length
+    }
+  }
+
+  /** 获取分类数据 */
+  async category() {
+    const ctx = this.ctx;
+    const model = ctx.model.Category;
+    const id = toInt(ctx.query.id);
+    
+    const currentCategory = await model.findOne({
+      where: {
+        id
+      }
+    })
+    const brotherCategory = await model.findAll({
+      where: {
+        parentId: currentCategory.parentId
+      }
+    })
+
+    ctx.body = {
+      code: '1',
+      data: {
+        brotherCategory,
+        currentCategory
+      }
     }
   }
 }

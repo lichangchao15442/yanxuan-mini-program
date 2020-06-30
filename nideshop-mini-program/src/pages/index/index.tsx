@@ -1,5 +1,5 @@
-import Taro, {  useEffect, useState } from '@tarojs/taro'
-import { View, Text, Swiper, SwiperItem , Image, Navigator} from '@tarojs/components'
+import Taro, { useEffect, useState } from '@tarojs/taro'
+import { View, Text, Swiper, SwiperItem, Image, Navigator } from '@tarojs/components'
 import { Dispatch } from 'redux'
 import { connect } from '@tarojs/redux'
 import { AtSearchBar } from 'taro-ui'
@@ -14,22 +14,22 @@ interface IndexProps {
 
 const Index = (props: IndexProps) => {
   // props
-  const { 
-    index: {  
-      banner, 
-      channel, 
-      categoryList, 
-      brandList, 
+  const {
+    index: {
+      banner,
+      channel,
+      categoryList,
+      brandList,
       newGoodsList,
       hotGoodsList,
       topicList,
       goodsCount
-     },
-     dispatch 
-    } = props
+    },
+    dispatch
+  } = props
 
-    // useState
-    const [searchValue, setSearchValue] = useState('') // 搜索框的值
+  // useState
+  const [searchValue, setSearchValue] = useState('') // 搜索框的值
 
   // 进入页面，请求展示数据
   useEffect(() => {
@@ -41,7 +41,7 @@ const Index = (props: IndexProps) => {
     dispatch({
       type: 'index/fetchGoodsCount'
     })
-  },[])
+  }, [])
 
   // 搜索框值变化的回调函数
   const onSearchValueChange = (value: string) => {
@@ -63,18 +63,22 @@ const Index = (props: IndexProps) => {
         circular
         indicatorDots
         autoplay>
-          {banner.map(item => <SwiperItem className="swiper-item">
-            <Image 
-              key={item.id} 
-              src={item.imageUrl} 
-              mode="aspectFit"
-            />
+        {banner.map(item => <SwiperItem className="swiper-item">
+          <Image
+            key={item.id}
+            src={item.imageUrl}
+            mode="aspectFit"
+          />
         </SwiperItem>)}
       </Swiper>
       <View className="menu">
-        {channel.map(item => <Navigator key={item.id}>
+        {channel.map(item => <Navigator
+          className="menu-item"
+          key={item.id}
+          url={item.url}
+        >
           <Image src={item.iconUrl} />
-        <Text>{item.name}</Text>
+          <Text>{item.name}</Text>
         </Navigator>)}
       </View>
       <View className="selection m-brand">
@@ -124,43 +128,43 @@ const Index = (props: IndexProps) => {
         <View className="selection-title">
           <Text>专题精选</Text>
         </View>
-          <Swiper
-           style='height: 530rpx'
-           autoplay
-           circular
-          >
-            {topicList.map(item => <SwiperItem className="topic" key={item.id}>
-              <Image src={item.scenePicUrl}  mode="aspectFill" />
-              <View className="topic-text">
-                <View>
-                  <Text className="topic-title">{item.title}</Text>
-                  <Text className="topic-price">¥{item.priceInfo}元起</Text>
-                </View>
-                <Text className="topic-desc text-ellipsis">{item.subtitle}</Text>
+        <Swiper
+          style='height: 530rpx'
+          autoplay
+          circular
+        >
+          {topicList.map(item => <SwiperItem className="topic" key={item.id}>
+            <Image src={item.scenePicUrl} mode="aspectFill" />
+            <View className="topic-text">
+              <View>
+                <Text className="topic-title">{item.title}</Text>
+                <Text className="topic-price">¥{item.priceInfo}元起</Text>
               </View>
+              <Text className="topic-desc text-ellipsis">{item.subtitle}</Text>
+            </View>
           </SwiperItem>)}
         </Swiper>
       </View>
       <View>
         {categoryList.map(category => <View className="selection m-category" key={category.id}>
-        <View className="selection-title">
-           <Text>{category.name}</Text>
-        </View>
-        <View className="at-row at-row--wrap categorys">
-          {category.goodsList.map(item => <View key={item.id} className="at-col-6 category">
-            <Image src={item.listPicUrl} />
-            <View className="category-text">
-              <Text className="category-text-name text-ellipsis">{item.name}</Text>
-              <Text className="category-text-price">¥{parseInt(item.retailPrice)}</Text>
-            </View>
-          </View>)}
-        </View>
-      </View>)}
+          <View className="selection-title">
+            <Text>{category.name}</Text>
+          </View>
+          <View className="at-row at-row--wrap categorys">
+            {category.goodsList.map(item => <View key={item.id} className="at-col-6 category">
+              <Image src={item.listPicUrl} />
+              <View className="category-text">
+                <Text className="category-text-name text-ellipsis">{item.name}</Text>
+                <Text className="category-text-price">¥{parseInt(item.retailPrice)}</Text>
+              </View>
+            </View>)}
+          </View>
+        </View>)}
       </View>
     </View>
   )
 }
 
-export default connect(({index}:{
+export default connect(({ index }: {
   index: IndexState
-}) => ({index}))(Index)
+}) => ({ index }))(Index)

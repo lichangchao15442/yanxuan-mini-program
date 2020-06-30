@@ -1,0 +1,55 @@
+.my-at-tabs .at-tabs__item {
+  font-size: 30rpx;
+}
+.my-at-tabs .at-tabs__item .at-tabs__item-underline {
+  height: 2PX;
+  background-color: #ab2b2b;
+}
+.my-at-tabs .at-tabs__item--active {
+  color: #ab2b2b;
+}
+.my-at-tabs .goods-title {
+  text-align: center;
+  padding: 20rpx;
+}
+.my-at-tabs .goods-title .goods-title-name {
+  font-size: 30rpx;
+  color: #333;
+  margin-bottom: 18rpx;
+}
+.my-at-tabs .goods-title .goods-title-frontName {
+  font-size: 24rpx;
+  color: #999;
+}
+.goods-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.goods-list .goods-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  width: 49.25%;
+  margin-bottom: 0.5%;
+  padding-bottom: 33.333rpx;
+  font-size: 30rpx;
+}
+.goods-list .goods-item image {
+  width: 302rpx;
+  height: 302rpx;
+}
+.goods-list .goods-item .goods-item-name {
+  width: 100%;
+  text-align: center;
+}
+.goods-list .goods-item .goods-item-name text {
+  padding: 0 20rpx;
+  color: #333;
+}
+.goods-list .goods-item .goods-item-price {
+  color: #b4282d;
+}
+.goods-list .goods-item-left {
+  margin-right: 0.5%;
+}

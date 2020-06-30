@@ -1,27 +1,27 @@
 <block wx:if="{{$taroCompReady}}">
     <view class="container">
-        <at-search-bar compid="{{$compid__139}}"></at-search-bar>
+        <at-search-bar compid="{{$compid__10}}"></at-search-bar>
         <block wx:if="{{!searchValue}}">
             <view class="except-search-input">
                 <view class="search-hot">
                     <view class="search-hot-title"><text>历史搜索</text>
                     </view>
                     <view class="search-hot-keywords">
-                        <at-tag wx:key="$original" wx:for="{{loopArray149}}" wx:for-item="item" wx:for-index="__index2" compid="{{item.$compid__137}}">{{item.$original}}</at-tag>
+                        <at-tag wx:key="$original" wx:for="{{loopArray15}}" wx:for-item="item" wx:for-index="__index2" compid="{{item.$compid__8}}">{{item.$original}}</at-tag>
                     </view>
                 </view>
                 <view class="search-hot">
                     <view class="search-hot-title"><text>热门搜索</text>
                     </view>
                     <view class="search-hot-keywords">
-                        <at-tag wx:key="keyword" wx:for="{{loopArray150}}" wx:for-item="item" wx:for-index="__index3" compid="{{item.$compid__138}}">{{item.$original.keyword}}</at-tag>
+                        <at-tag wx:key="keyword" wx:for="{{loopArray16}}" wx:for-item="item" wx:for-index="__index3" compid="{{item.$compid__9}}">{{item.$original.keyword}}</at-tag>
                     </view>
                 </view>
             </view>
         </block>
         <block wx:if="{{searchValue && showSearchHelper}}">
             <view class="search-help-lists except-search-input">
-                <view class="search-help-list" wx:key="$original" hover-class="navigator-hover" bindtap="anonymousFunc4" wx:for="{{loopArray151}}" wx:for-item="item" wx:for-index="__index4" data-e-tap-so="this" data-e-tap-a-a="{{item._$indexKey3}}">{{item.$original}}</view>
+                <view class="search-help-list" wx:key="$original" hover-class="navigator-hover" bindtap="anonymousFunc4" wx:for="{{loopArray17}}" wx:for-item="item" wx:for-index="__index4" data-e-tap-so="this" data-e-tap-a-a="{{item._$indexKey3}}">{{item.$original}}</view>
             </view>
         </block>
         <block wx:if="{{searchValue && !showSearchHelper && goodsList.length !== 0}}">
@@ -30,18 +30,18 @@
                     <view class="show-types-tab"><text class="{{currentShowType === 'comprehensive' ? 'global-text-red' : ''}}" bindtap="anonymousFunc5">综合</text>
                         <view class="tab-price"><text class="{{currentShowType === 'priceAsc' || currentShowType === 'priceDesc' ? 'global-text-red' : ''}}" bindtap="anonymousFunc6">价格</text>
                             <view class="tab-price-icon">
-                                <at-icon compid="{{$compid__140}}"></at-icon>
-                                <at-icon compid="{{$compid__141}}"></at-icon>
+                                <at-icon compid="{{$compid__11}}"></at-icon>
+                                <at-icon compid="{{$compid__12}}"></at-icon>
                             </view>
                         </view><text bindtap="anonymousFunc9">分类</text>
                     </view>
                     <block wx:if="{{showCategoryTabs}}">
-                        <view class="category-tabs"><text class="{{currentCategoryTab === item.$original.id ? 'active' : ''}}" wx:key="id" bindtap="anonymousFunc10" wx:for="{{loopArray152}}" wx:for-item="item" wx:for-index="__index10" data-e-tap-so="this" data-e-tap-a-a="{{item._$indexKey4}}">{{item.$original.name}}</text>
+                        <view class="category-tabs"><text class="{{currentCategoryTab === item.$original.id ? 'active' : ''}}" wx:key="id" bindtap="anonymousFunc10" wx:for="{{loopArray18}}" wx:for-item="item" wx:for-index="__index10" data-e-tap-so="this" data-e-tap-a-a="{{item._$indexKey4}}">{{item.$original.name}}</text>
                         </view>
                     </block>
                 </view>
                 <view class="goods-list">
-                    <view class="goods-item" wx:for="{{loopArray153}}" wx:for-item="item" wx:for-index="_anonIdx2">
+                    <view class="goods-item" wx:for="{{loopArray19}}" wx:for-item="item" wx:for-index="_anonIdx2">
                         <image src="{{item.$original.listPicUrl}}"></image>
                         <view class="global-goods-list-item"><text>{{item.$original.name}}</text><text class="goods-price">¥ {{item.$loopState__temp4}}</text>
                         </view>

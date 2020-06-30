@@ -54,7 +54,7 @@ var Search = (_temp2 = _class = function (_Taro$Component) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Search.__proto__ || Object.getPrototypeOf(Search)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray149", "loopArray150", "loopArray151", "loopArray152", "loopArray153", "$compid__139", "$compid__140", "$compid__141", "searchValue", "historyKeywordList", "hotKeywordList", "showSearchHelper", "helpKeywords", "goodsList", "currentShowType", "showCategoryTabs", "currentCategoryTab", "filterCategoryList"], _this.anonymousFunc2Map = {}, _this.anonymousFunc3Map = {}, _this.anonymousFunc4Map = {}, _this.anonymousFunc10Map = {}, _this.customComponents = ["AtSearchBar", "AtTag", "AtIcon"], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Search.__proto__ || Object.getPrototypeOf(Search)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray15", "loopArray16", "loopArray17", "loopArray18", "loopArray19", "$compid__10", "$compid__11", "$compid__12", "searchValue", "historyKeywordList", "hotKeywordList", "showSearchHelper", "helpKeywords", "goodsList", "currentShowType", "showCategoryTabs", "currentCategoryTab", "filterCategoryList"], _this.anonymousFunc2Map = {}, _this.anonymousFunc3Map = {}, _this.anonymousFunc4Map = {}, _this.anonymousFunc10Map = {}, _this.customComponents = ["AtSearchBar", "AtTag", "AtIcon"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Search, [{
@@ -75,20 +75,20 @@ var Search = (_temp2 = _class = function (_Taro$Component) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__139"),
+      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__10"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__139 = _genCompid2[0],
-          $compid__139 = _genCompid2[1];
+          $prevCompid__10 = _genCompid2[0],
+          $compid__10 = _genCompid2[1];
 
-      var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "$compid__140"),
+      var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "$compid__11"),
           _genCompid4 = _slicedToArray(_genCompid3, 2),
-          $prevCompid__140 = _genCompid4[0],
-          $compid__140 = _genCompid4[1];
+          $prevCompid__11 = _genCompid4[0],
+          $compid__11 = _genCompid4[1];
 
-      var _genCompid5 = (0, _taroWeapp.genCompid)(__prefix + "$compid__141"),
+      var _genCompid5 = (0, _taroWeapp.genCompid)(__prefix + "$compid__12"),
           _genCompid6 = _slicedToArray(_genCompid5, 2),
-          $prevCompid__141 = _genCompid6[0],
-          $compid__141 = _genCompid6[1];
+          $prevCompid__12 = _genCompid6[0],
+          $compid__12 = _genCompid6[1];
 
       var props = this.__props;
 
@@ -291,65 +291,65 @@ var Search = (_temp2 = _class = function (_Taro$Component) {
         onChangeShowTypeTab('category');
       };
 
-      var loopArray149 = !searchValue ? historyKeywordList.map(function (item, __index2) {
+      var loopArray15 = !searchValue ? historyKeywordList.map(function (item, __index2) {
         item = {
           $original: (0, _taroWeapp.internal_get_original)(item)
         };
 
-        var _$indexKey = "beezz" + __index2;
+        var _$indexKey = "hzzzz" + __index2;
 
         _this2.anonymousFunc2Map[_$indexKey] = onChangeSelectedKeyword;
 
-        var _genCompid7 = (0, _taroWeapp.genCompid)(__prefix + 'beizzzzzzz' + __index2, true),
+        var _genCompid7 = (0, _taroWeapp.genCompid)(__prefix + 'bbzzzzzzzz' + __index2, true),
             _genCompid8 = _slicedToArray(_genCompid7, 2),
-            $prevCompid__137 = _genCompid8[0],
-            $compid__137 = _genCompid8[1];
+            $prevCompid__8 = _genCompid8[0],
+            $compid__8 = _genCompid8[1];
 
         !searchValue && _taroWeapp.propsManager.set({
           "className": "search-hot-keyword",
           "name": item.$original,
           "onClick": _this2.anonymousFunc2.bind(_this2, _$indexKey)
-        }, $compid__137, $prevCompid__137);
+        }, $compid__8, $prevCompid__8);
         return {
           _$indexKey: _$indexKey,
-          $compid__137: $compid__137,
+          $compid__8: $compid__8,
           $original: item.$original
         };
       }) : [];
-      var loopArray150 = !searchValue ? hotKeywordList.map(function (item, __index3) {
+      var loopArray16 = !searchValue ? hotKeywordList.map(function (item, __index3) {
         item = {
           $original: (0, _taroWeapp.internal_get_original)(item)
         };
         var $loopState__temp2 = !searchValue ? selectedHotKeyword === item.$original.keyword : null;
 
-        var _$indexKey2 = "befzz" + __index3;
+        var _$indexKey2 = "izzzz" + __index3;
 
         _this2.anonymousFunc3Map[_$indexKey2] = onChangeSelectedKeyword;
 
-        var _genCompid9 = (0, _taroWeapp.genCompid)(__prefix + 'bejzzzzzzz' + __index3, true),
+        var _genCompid9 = (0, _taroWeapp.genCompid)(__prefix + 'bczzzzzzzz' + __index3, true),
             _genCompid10 = _slicedToArray(_genCompid9, 2),
-            $prevCompid__138 = _genCompid10[0],
-            $compid__138 = _genCompid10[1];
+            $prevCompid__9 = _genCompid10[0],
+            $compid__9 = _genCompid10[1];
 
         !searchValue && _taroWeapp.propsManager.set({
           "className": "search-hot-keyword",
           "name": item.$original.keyword,
           "active": $loopState__temp2,
           "onClick": _this2.anonymousFunc3.bind(_this2, _$indexKey2)
-        }, $compid__138, $prevCompid__138);
+        }, $compid__9, $prevCompid__9);
         return {
           $loopState__temp2: $loopState__temp2,
           _$indexKey2: _$indexKey2,
-          $compid__138: $compid__138,
+          $compid__9: $compid__9,
           $original: item.$original
         };
       }) : [];
-      var loopArray151 = searchValue && showSearchHelper ? helpKeywords.map(function (item, __index4) {
+      var loopArray17 = searchValue && showSearchHelper ? helpKeywords.map(function (item, __index4) {
         item = {
           $original: (0, _taroWeapp.internal_get_original)(item)
         };
 
-        var _$indexKey3 = "begzz" + __index4;
+        var _$indexKey3 = "jzzzz" + __index4;
 
         _this2.anonymousFunc4Map[_$indexKey3] = function () {
           onSelectedHelp(item.$original);
@@ -360,12 +360,12 @@ var Search = (_temp2 = _class = function (_Taro$Component) {
           $original: item.$original
         };
       }) : [];
-      var loopArray152 = showCategoryTabs ? filterCategoryList.map(function (item, __index10) {
+      var loopArray18 = showCategoryTabs ? filterCategoryList.map(function (item, __index10) {
         item = {
           $original: (0, _taroWeapp.internal_get_original)(item)
         };
 
-        var _$indexKey4 = "behzz" + __index10;
+        var _$indexKey4 = "bazzz" + __index10;
 
         _this2.anonymousFunc10Map[_$indexKey4] = function () {
           return onSelectCategory(item.$original.id);
@@ -376,7 +376,7 @@ var Search = (_temp2 = _class = function (_Taro$Component) {
           $original: item.$original
         };
       }) : [];
-      var loopArray153 = searchValue && !showSearchHelper && goodsList.length !== 0 ? goodsList.map(function (item, _anonIdx) {
+      var loopArray19 = searchValue && !showSearchHelper && goodsList.length !== 0 ? goodsList.map(function (item, _anonIdx) {
         item = {
           $original: (0, _taroWeapp.internal_get_original)(item)
         };
@@ -394,28 +394,28 @@ var Search = (_temp2 = _class = function (_Taro$Component) {
         "value": searchValue,
         "onChange": this.anonymousFunc0,
         "onActionClick": this.anonymousFunc1
-      }, $compid__139, $prevCompid__139);
+      }, $compid__10, $prevCompid__10);
       searchValue && !showSearchHelper && goodsList.length !== 0 && _taroWeapp.propsManager.set({
         "value": "chevron-up",
         "size": "12",
         "color": currentShowType === 'priceAsc' ? '#b4282d' : 'rgb(222, 222, 222)',
         "onClick": this.anonymousFunc7
-      }, $compid__140, $prevCompid__140);
+      }, $compid__11, $prevCompid__11);
       searchValue && !showSearchHelper && goodsList.length !== 0 && _taroWeapp.propsManager.set({
         "value": "chevron-down",
         "size": "12",
         "color": currentShowType === 'priceDesc' ? '#b4282d' : 'rgb(222, 222, 222)',
         "onClick": this.anonymousFunc8
-      }, $compid__141, $prevCompid__141);
+      }, $compid__12, $prevCompid__12);
       Object.assign(this.__state, {
-        loopArray149: loopArray149,
-        loopArray150: loopArray150,
-        loopArray151: loopArray151,
-        loopArray152: loopArray152,
-        loopArray153: loopArray153,
-        $compid__139: $compid__139,
-        $compid__140: $compid__140,
-        $compid__141: $compid__141,
+        loopArray15: loopArray15,
+        loopArray16: loopArray16,
+        loopArray17: loopArray17,
+        loopArray18: loopArray18,
+        loopArray19: loopArray19,
+        $compid__10: $compid__10,
+        $compid__11: $compid__11,
+        $compid__12: $compid__12,
         searchValue: searchValue,
         historyKeywordList: historyKeywordList,
         hotKeywordList: hotKeywordList,

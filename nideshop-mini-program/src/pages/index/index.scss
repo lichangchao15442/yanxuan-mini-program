@@ -8,15 +8,22 @@
 .menu {
   height: 181px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: #fff;
+
+  .menu-item {
+    flex: 1;
+    padding: 20px 0;
+    text-align: center;
+  }
 
   image {
     width: 58rpx;
     height: 58rpx;
     margin-bottom: 20rpx;
     display: block;
+    margin: 0 auto;
   }
 
   text {

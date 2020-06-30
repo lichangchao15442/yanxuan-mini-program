@@ -543,7 +543,7 @@ var _App = function (_BaseComponent) {
     var _this = _possibleConstructorReturn(this, (_App.__proto__ || Object.getPrototypeOf(_App)).apply(this, arguments));
 
     _this.config = {
-      pages: ['pages/index/index', 'pages/topic/topic', 'pages/catalog/catalog', 'pages/cart/cart', 'pages/ucenter/index/index', 'pages/search/search'],
+      pages: ['pages/index/index', 'pages/topic/topic', 'pages/catalog/catalog', 'pages/cart/cart', 'pages/ucenter/index/index', 'pages/search/search', 'pages/category/category'],
       window: {
         backgroundTextStyle: 'dark',
         navigationBarBackgroundColor: '#fff',
@@ -6665,9 +6665,170 @@ var _model3 = __webpack_require__(/*! ../pages/search/model */ "./src/pages/sear
 
 var _model4 = _interopRequireDefault(_model3);
 
+var _model5 = __webpack_require__(/*! ../pages/category/model */ "./src/pages/category/model.ts");
+
+var _model6 = _interopRequireDefault(_model5);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = [_model2.default, _model4.default];
+exports.default = [_model2.default, _model4.default, _model6.default];
+
+/***/ }),
+
+/***/ "./src/pages/category/model.ts":
+/*!*************************************!*\
+  !*** ./src/pages/category/model.ts ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _regenerator = __webpack_require__(/*! babel-runtime/regenerator */ "./node_modules/babel-runtime/regenerator/index.js");
+
+var _regenerator2 = _interopRequireDefault(_regenerator);
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _service = __webpack_require__(/*! ./service */ "./src/pages/category/service.ts");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Model = {
+  namespace: 'category',
+  state: {
+    goodsCategory: [],
+    currentCategory: {},
+    goodsList: []
+  },
+  effects: {
+    /** 获取分类数据 */
+    fetchGoodsCategory: /*#__PURE__*/_regenerator2.default.mark(function fetchGoodsCategory(_ref, _ref2) {
+      var payload = _ref.payload;
+      var call = _ref2.call,
+          put = _ref2.put;
+      var response;
+      return _regenerator2.default.wrap(function fetchGoodsCategory$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              _context.next = 2;
+              return call(_service.getGoodsCategory, payload);
+
+            case 2:
+              response = _context.sent;
+
+              if (!(response.code === '1')) {
+                _context.next = 6;
+                break;
+              }
+
+              _context.next = 6;
+              return put({
+                type: 'save',
+                payload: {
+                  goodsCategory: response.data.brotherCategory,
+                  currentCategory: response.data.currentCategory
+                }
+              });
+
+            case 6:
+            case 'end':
+              return _context.stop();
+          }
+        }
+      }, fetchGoodsCategory, this);
+    }),
+
+    /** 获取商品列表 */
+    fetchGoodsList: /*#__PURE__*/_regenerator2.default.mark(function fetchGoodsList(_ref3, _ref4) {
+      var payload = _ref3.payload;
+      var call = _ref4.call,
+          put = _ref4.put;
+      var response;
+      return _regenerator2.default.wrap(function fetchGoodsList$(_context2) {
+        while (1) {
+          switch (_context2.prev = _context2.next) {
+            case 0:
+              _context2.next = 2;
+              return call(_service.getGoddsList, payload);
+
+            case 2:
+              response = _context2.sent;
+
+              if (!(response.code === '1')) {
+                _context2.next = 6;
+                break;
+              }
+
+              _context2.next = 6;
+              return put({
+                type: 'save',
+                payload: {
+                  goodsList: response.data.goodsList
+                }
+              });
+
+            case 6:
+            case 'end':
+              return _context2.stop();
+          }
+        }
+      }, fetchGoodsList, this);
+    })
+  },
+  reducers: {
+    save: function save(state, _ref5) {
+      var payload = _ref5.payload;
+
+      return _extends({}, state, payload);
+    }
+  }
+};
+exports.default = Model;
+
+/***/ }),
+
+/***/ "./src/pages/category/service.ts":
+/*!***************************************!*\
+  !*** ./src/pages/category/service.ts ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getGoddsList = exports.getGoodsCategory = undefined;
+
+var _request = __webpack_require__(/*! ../../utils/request */ "./src/utils/request.ts");
+
+var _request2 = _interopRequireDefault(_request);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var getGoodsCategory = exports.getGoodsCategory = function getGoodsCategory(data) {
+  return (0, _request2.default)({
+    url: '/goods/category',
+    method: 'GET',
+    data: data
+  });
+};
+var getGoddsList = exports.getGoddsList = function getGoddsList(data) {
+  return (0, _request2.default)({
+    url: '/goods/list',
+    method: 'GET',
+    data: data
+  });
+};
 
 /***/ }),
 

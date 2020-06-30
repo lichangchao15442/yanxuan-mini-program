@@ -20,13 +20,13 @@ const store = dvaApp.getStore();   //  getStore是一个函数！！！要执行
 
 class App extends Component {
 
-  componentDidMount () {}
+  componentDidMount() { }
 
-  componentDidShow () {}
+  componentDidShow() { }
 
-  componentDidHide () {}
+  componentDidHide() { }
 
-  componentDidCatchError () {}
+  componentDidCatchError() { }
 
   /**
    * 指定config的类型声明为: Taro.Config
@@ -42,7 +42,8 @@ class App extends Component {
       'pages/catalog/catalog',
       'pages/cart/cart',
       'pages/ucenter/index/index',
-      'pages/search/search'
+      'pages/search/search',
+      'pages/category/category',
     ],
     window: {
       backgroundTextStyle: 'dark',
@@ -51,41 +52,41 @@ class App extends Component {
       navigationBarTextStyle: 'black',
       enablePullDownRefresh: true
     },
-    tabBar:{
-      backgroundColor:'#fafafa',
-      borderStyle:'white',
-      selectedColor:'#b4282d',
-      color:'#666',
-      list:[
+    tabBar: {
+      backgroundColor: '#fafafa',
+      borderStyle: 'white',
+      selectedColor: '#b4282d',
+      color: '#666',
+      list: [
         {
-          pagePath:'pages/index/index',
-          iconPath:'static/images/ic_menu_choice_nor.png',
-          selectedIconPath:'static/images/ic_menu_choice_pressed.png',
-          text:'首页'
+          pagePath: 'pages/index/index',
+          iconPath: 'static/images/ic_menu_choice_nor.png',
+          selectedIconPath: 'static/images/ic_menu_choice_pressed.png',
+          text: '首页'
         },
         {
-          pagePath:'pages/topic/topic',
-          iconPath:'static/images/ic_menu_topic_nor.png',
-          selectedIconPath:'static/images/ic_menu_topic_pressed.png',
-          text:'专题'
+          pagePath: 'pages/topic/topic',
+          iconPath: 'static/images/ic_menu_topic_nor.png',
+          selectedIconPath: 'static/images/ic_menu_topic_pressed.png',
+          text: '专题'
         },
         {
-          pagePath:'pages/catalog/catalog',
-          iconPath:'static/images/ic_menu_sort_nor.png',
-          selectedIconPath:'static/images/ic_menu_sort_pressed.png',
-          text:'分类',
+          pagePath: 'pages/catalog/catalog',
+          iconPath: 'static/images/ic_menu_sort_nor.png',
+          selectedIconPath: 'static/images/ic_menu_sort_pressed.png',
+          text: '分类',
         },
         {
-          pagePath:'pages/cart/cart',
-          iconPath:'static/images/ic_menu_shoping_nor.png',
-          selectedIconPath:'static/images/ic_menu_shoping_pressed.png',
-          text:'购物车'
+          pagePath: 'pages/cart/cart',
+          iconPath: 'static/images/ic_menu_shoping_nor.png',
+          selectedIconPath: 'static/images/ic_menu_shoping_pressed.png',
+          text: '购物车'
         },
         {
-          pagePath:'pages/ucenter/index/index',
-          iconPath:'static/images/ic_menu_me_nor.png',
-          selectedIconPath:'static/images/ic_menu_me_pressed.png',
-          text:'我的'
+          pagePath: 'pages/ucenter/index/index',
+          iconPath: 'static/images/ic_menu_me_nor.png',
+          selectedIconPath: 'static/images/ic_menu_me_pressed.png',
+          text: '我的'
         }
       ]
     }
@@ -93,11 +94,11 @@ class App extends Component {
 
   // 在 App 类中的 render() 函数没有实际作用
   // 请勿修改此函数
-  render () {
+  render() {
     return (
-        <Provider store={store}>
-          <Index />
-        </Provider>
+      <Provider store={store}>
+        <Index />
+      </Provider>
     )
   }
 }
