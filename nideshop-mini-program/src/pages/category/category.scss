@@ -1,5 +1,10 @@
 
 .my-at-tabs {
+  position: fixed;
+  z-index: 1000;
+  .at-tabs__header {
+    border-top: 4px solid rgba(0,0,0,.15);
+  }
     .at-tabs__item {
       font-size: 30px;
       .at-tabs__item-underline {
@@ -10,23 +15,23 @@
     .at-tabs__item--active {
       color: #ab2b2b;
     }
-
-    .goods-title {
-      text-align: center;
-      padding: 20px;
-      .goods-title-name {
-        font-size: 30px;
-        color: #333;
-        margin-bottom: 18px;
-      }
-      .goods-title-frontName {
-        font-size: 24px;
-        color: #999;
-      }
-    }
-
 }
 
+.goods-title {
+  text-align: center;
+  padding: 20px;
+  padding-top: 110rpx;
+
+  .goods-title-name {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 18px;
+  }
+  .goods-title-frontName {
+    font-size: 24px;
+    color: #999;
+  }
+}
 
 .goods-list {
   display: flex;

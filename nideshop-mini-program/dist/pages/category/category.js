@@ -56,7 +56,7 @@ var Category = (_temp2 = _class = function (_Taro$Component) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Category.__proto__ || Object.getPrototypeOf(Category)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray52", "loopArray53", "$compid__39", "tabList", "goodsList", "currentCategory"], _this.customComponents = ["AtTabs", "AtTabsPane"], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Category.__proto__ || Object.getPrototypeOf(Category)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray65", "$compid__51", "goodsList", "currentCategory"], _this.customComponents = ["AtTabs"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Category, [{
@@ -75,10 +75,10 @@ var Category = (_temp2 = _class = function (_Taro$Component) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__39"),
+      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__51"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__39 = _genCompid2[0],
-          $compid__39 = _genCompid2[1];
+          $prevCompid__51 = _genCompid2[0],
+          $compid__51 = _genCompid2[1];
 
       var props = this.__props;
 
@@ -150,26 +150,7 @@ var Category = (_temp2 = _class = function (_Taro$Component) {
         setCurrentTab(index);
       };
 
-      var loopArray52 = tabList.map(function (item, index) {
-        item = {
-          $original: (0, _taroWeapp.internal_get_original)(item)
-        };
-
-        var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + 'cfzzzzzzzz' + index, true),
-            _genCompid4 = _slicedToArray(_genCompid3, 2),
-            $prevCompid__38 = _genCompid4[0],
-            $compid__38 = _genCompid4[1];
-
-        _taroWeapp.propsManager.set({
-          "current": currentTab,
-          "index": index
-        }, $compid__38, $prevCompid__38);
-        return {
-          $compid__38: $compid__38,
-          $original: item.$original
-        };
-      });
-      var loopArray53 = goodsList.map(function (item, index) {
+      var loopArray65 = goodsList.map(function (item, index) {
         item = {
           $original: (0, _taroWeapp.internal_get_original)(item)
         };
@@ -189,12 +170,10 @@ var Category = (_temp2 = _class = function (_Taro$Component) {
         "scroll": true,
         "tabList": tabList,
         "onClick": this.anonymousFunc0
-      }, $compid__39, $prevCompid__39);
+      }, $compid__51, $prevCompid__51);
       Object.assign(this.__state, {
-        loopArray52: loopArray52,
-        loopArray53: loopArray53,
-        $compid__39: $compid__39,
-        tabList: tabList,
+        loopArray65: loopArray65,
+        $compid__51: $compid__51,
         goodsList: goodsList,
         currentCategory: currentCategory
       });

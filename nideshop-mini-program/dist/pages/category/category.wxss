@@ -1,3 +1,10 @@
+.my-at-tabs {
+  position: fixed;
+  z-index: 1000;
+}
+.my-at-tabs .at-tabs__header {
+  border-top: 4rpx solid rgba(0, 0, 0, 0.15);
+}
 .my-at-tabs .at-tabs__item {
   font-size: 30rpx;
 }
@@ -8,16 +15,17 @@
 .my-at-tabs .at-tabs__item--active {
   color: #ab2b2b;
 }
-.my-at-tabs .goods-title {
+.goods-title {
   text-align: center;
   padding: 20rpx;
+  padding-top: 110rpx;
 }
-.my-at-tabs .goods-title .goods-title-name {
+.goods-title .goods-title-name {
   font-size: 30rpx;
   color: #333;
   margin-bottom: 18rpx;
 }
-.my-at-tabs .goods-title .goods-title-frontName {
+.goods-title .goods-title-frontName {
   font-size: 24rpx;
   color: #999;
 }

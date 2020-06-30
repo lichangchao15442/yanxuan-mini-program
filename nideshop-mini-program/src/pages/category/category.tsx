@@ -74,14 +74,11 @@ const Category = (props: CategoryProps) => {
       scroll
       tabList={tabList}
       onClick={(index) => { setCurrentTab(index) }}
-    >
-      {tabList.map((item, index) => <AtTabsPane current={currentTab} index={index}>
-        <View className='goods-title'>
-          <View className='goods-title-name'>{currentCategory.name}</View>
-          <View className='goods-title-frontName'>{currentCategory.frontName}</View>
-        </View>
-      </AtTabsPane>)}
-    </AtTabs>
+    />
+    <View className='goods-title'>
+      <View className='goods-title-name'>{currentCategory.name}</View>
+      <View className='goods-title-frontName'>{currentCategory.frontName}</View>
+    </View>
     <View className='goods-list'>
       {goodsList.map((item, index) => <View key={item.id} className={classnames('goods-item', index % 2 === 0 ? 'goods-item-left' : 'goods-item-right')} >
         <Image src={item.listPicUrl} mode='aspectFit' />
