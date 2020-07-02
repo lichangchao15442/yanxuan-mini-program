@@ -1,8 +1,8 @@
-import Taro, { useRouter, useEffect, useState } from '@tarojs/taro'
-import { View, Image, Text } from '@tarojs/components'
+import Taro, { useRouter, useEffect, useState, useRef } from '@tarojs/taro'
+import { View, Image, Text, Navigator } from '@tarojs/components'
 import { connect } from '@tarojs/redux'
 import { Dispatch } from 'redux'
-import { AtTabs, AtTabsPane } from 'taro-ui'
+import { AtTabs } from 'taro-ui'
 import classnames from 'classnames'
 
 import { CategoryState } from './data'
@@ -25,17 +25,22 @@ const Category = (props: CategoryProps) => {
   const [tabList, setTabList] = useState<{ title: string }[]>([]) // 分类tab标签
   const [currentTab, setCurrentTab] = useState<number>(0) // 当前选中的tab
 
+  // useRef
+  const hasClickedTab = useRef(false) // 是否点击过分类tab
+
   /** 进入页面，设置选中的tab */
-  useEffect(() => {
-    let initIndex = 0
-    goodsCategory.map((item, index) => {
-      if (item.id === Number(id)) {
-        initIndex = index
-      }
-      return item
-    })
-    setCurrentTab(initIndex)
-  }, [goodsCategory])
+  // useEffect(() => {
+  //   // TODO: bug： goodsCategory每次请求都当作改变了
+  //   console.log('goodsCategory', goodsCategory)
+  //   let initIndex = 0
+  //   goodsCategory.map((item, index) => {
+  //     if (item.id === Number(id)) {
+  //       initIndex = index
+  //     }
+  //     return item
+  //   })
+  //   setCurrentTab(initIndex)
+  // }, [goodsCategory])
 
   useEffect(() => {
     if (goodsCategory.length) {
@@ -47,6 +52,8 @@ const Category = (props: CategoryProps) => {
 
   useEffect(() => {
     const categoryId = goodsCategory.length ? goodsCategory[currentTab].id : id
+    // 判断是否点击过，如果没有点击则说明是进入页面默认选中的
+    if (!hasClickedTab.current) { setCurrentTab(findTabIndex(id)) }
 
     // 获取分类列表和当前分类
     dispatch({
@@ -67,26 +74,54 @@ const Category = (props: CategoryProps) => {
     })
   }, [currentTab])
 
+  /**
+   * 在商品分类列表中根据分类ID找到其下标
+   * @param id 
+   */
+  const findTabIndex = (id) => {
+    let initIndex = 0
+    goodsCategory.map((item, index) => {
+      if (item.id === Number(id)) {
+        initIndex = index
+      }
+      return item
+    })
+    return initIndex
+  }
+
+  /**
+   * 点击选中某项分类tab
+   * @param index 
+   */
+  const onSelectTab = (index) => {
+    hasClickedTab.current = true
+    setCurrentTab(index)
+  }
+
   return <View className="container">
     <AtTabs
       className='my-at-tabs'
       current={currentTab}
       scroll
       tabList={tabList}
-      onClick={(index) => { setCurrentTab(index) }}
+      onClick={(index) => { onSelectTab(index) }}
     />
     <View className='goods-title'>
       <View className='goods-title-name'>{currentCategory.name}</View>
       <View className='goods-title-frontName'>{currentCategory.frontName}</View>
     </View>
     <View className='goods-list'>
-      {goodsList.map((item, index) => <View key={item.id} className={classnames('goods-item', index % 2 === 0 ? 'goods-item-left' : 'goods-item-right')} >
+      {goodsList.map((item, index) => <Navigator
+        className={classnames('goods-item', index % 2 === 0 ? 'goods-item-left' : 'goods-item-right')}
+        key={item.id}
+        url={`/pages/goods/goods?id=${item.id}`}
+      >
         <Image src={item.listPicUrl} mode='aspectFit' />
         <View className='goods-item-name' style={{ width: '100%' }}>
           <Text className='text-ellipsis'>{item.name}</Text>
         </View>
         <Text className='goods-item-price'>¥ {parseInt(item.retailPrice)}</Text>
-      </View>)}
+      </Navigator>)}
     </View>
   </View>
 }

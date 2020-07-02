@@ -54,7 +54,7 @@ var Search = (_temp2 = _class = function (_Taro$Component) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Search.__proto__ || Object.getPrototypeOf(Search)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray15", "loopArray16", "loopArray17", "loopArray18", "loopArray19", "$compid__10", "$compid__11", "$compid__12", "searchValue", "historyKeywordList", "hotKeywordList", "showSearchHelper", "helpKeywords", "goodsList", "currentShowType", "showCategoryTabs", "currentCategoryTab", "filterCategoryList"], _this.anonymousFunc2Map = {}, _this.anonymousFunc3Map = {}, _this.anonymousFunc4Map = {}, _this.anonymousFunc10Map = {}, _this.customComponents = ["AtSearchBar", "AtTag", "AtIcon"], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Search.__proto__ || Object.getPrototypeOf(Search)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray21", "loopArray22", "loopArray23", "loopArray24", "loopArray25", "$compid__10", "$compid__11", "$compid__12", "searchValue", "historyKeywordList", "hotKeywordList", "showSearchHelper", "helpKeywords", "goodsList", "currentShowType", "showCategoryTabs", "currentCategoryTab", "filterCategoryList"], _this.anonymousFunc2Map = {}, _this.anonymousFunc3Map = {}, _this.anonymousFunc4Map = {}, _this.anonymousFunc10Map = {}, _this.customComponents = ["AtSearchBar", "AtTag", "AtIcon"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Search, [{
@@ -291,16 +291,16 @@ var Search = (_temp2 = _class = function (_Taro$Component) {
         onChangeShowTypeTab('category');
       };
 
-      var loopArray15 = !searchValue ? historyKeywordList.map(function (item, __index2) {
+      var loopArray21 = !searchValue ? historyKeywordList.map(function (item, __index2) {
         item = {
           $original: (0, _taroWeapp.internal_get_original)(item)
         };
 
-        var _$indexKey = "hzzzz" + __index2;
+        var _$indexKey = "gzzzz" + __index2;
 
         _this2.anonymousFunc2Map[_$indexKey] = onChangeSelectedKeyword;
 
-        var _genCompid7 = (0, _taroWeapp.genCompid)(__prefix + 'bbzzzzzzzz' + __index2, true),
+        var _genCompid7 = (0, _taroWeapp.genCompid)(__prefix + 'bazzzzzzzz' + __index2, true),
             _genCompid8 = _slicedToArray(_genCompid7, 2),
             $prevCompid__8 = _genCompid8[0],
             $compid__8 = _genCompid8[1];
@@ -316,17 +316,17 @@ var Search = (_temp2 = _class = function (_Taro$Component) {
           $original: item.$original
         };
       }) : [];
-      var loopArray16 = !searchValue ? hotKeywordList.map(function (item, __index3) {
+      var loopArray22 = !searchValue ? hotKeywordList.map(function (item, __index3) {
         item = {
           $original: (0, _taroWeapp.internal_get_original)(item)
         };
         var $loopState__temp2 = !searchValue ? selectedHotKeyword === item.$original.keyword : null;
 
-        var _$indexKey2 = "izzzz" + __index3;
+        var _$indexKey2 = "hzzzz" + __index3;
 
         _this2.anonymousFunc3Map[_$indexKey2] = onChangeSelectedKeyword;
 
-        var _genCompid9 = (0, _taroWeapp.genCompid)(__prefix + 'bczzzzzzzz' + __index3, true),
+        var _genCompid9 = (0, _taroWeapp.genCompid)(__prefix + 'bbzzzzzzzz' + __index3, true),
             _genCompid10 = _slicedToArray(_genCompid9, 2),
             $prevCompid__9 = _genCompid10[0],
             $compid__9 = _genCompid10[1];
@@ -344,12 +344,12 @@ var Search = (_temp2 = _class = function (_Taro$Component) {
           $original: item.$original
         };
       }) : [];
-      var loopArray17 = searchValue && showSearchHelper ? helpKeywords.map(function (item, __index4) {
+      var loopArray23 = searchValue && showSearchHelper ? helpKeywords.map(function (item, __index4) {
         item = {
           $original: (0, _taroWeapp.internal_get_original)(item)
         };
 
-        var _$indexKey3 = "jzzzz" + __index4;
+        var _$indexKey3 = "izzzz" + __index4;
 
         _this2.anonymousFunc4Map[_$indexKey3] = function () {
           onSelectedHelp(item.$original);
@@ -360,12 +360,12 @@ var Search = (_temp2 = _class = function (_Taro$Component) {
           $original: item.$original
         };
       }) : [];
-      var loopArray18 = showCategoryTabs ? filterCategoryList.map(function (item, __index10) {
+      var loopArray24 = showCategoryTabs ? filterCategoryList.map(function (item, __index10) {
         item = {
           $original: (0, _taroWeapp.internal_get_original)(item)
         };
 
-        var _$indexKey4 = "bazzz" + __index10;
+        var _$indexKey4 = "jzzzz" + __index10;
 
         _this2.anonymousFunc10Map[_$indexKey4] = function () {
           return onSelectCategory(item.$original.id);
@@ -376,7 +376,7 @@ var Search = (_temp2 = _class = function (_Taro$Component) {
           $original: item.$original
         };
       }) : [];
-      var loopArray19 = searchValue && !showSearchHelper && goodsList.length !== 0 ? goodsList.map(function (item, _anonIdx) {
+      var loopArray25 = searchValue && !showSearchHelper && goodsList.length !== 0 ? goodsList.map(function (item, _anonIdx) {
         item = {
           $original: (0, _taroWeapp.internal_get_original)(item)
         };
@@ -408,11 +408,11 @@ var Search = (_temp2 = _class = function (_Taro$Component) {
         "onClick": this.anonymousFunc8
       }, $compid__12, $prevCompid__12);
       Object.assign(this.__state, {
-        loopArray15: loopArray15,
-        loopArray16: loopArray16,
-        loopArray17: loopArray17,
-        loopArray18: loopArray18,
-        loopArray19: loopArray19,
+        loopArray21: loopArray21,
+        loopArray22: loopArray22,
+        loopArray23: loopArray23,
+        loopArray24: loopArray24,
+        loopArray25: loopArray25,
         $compid__10: $compid__10,
         $compid__11: $compid__11,
         $compid__12: $compid__12,

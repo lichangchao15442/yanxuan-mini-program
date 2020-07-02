@@ -543,7 +543,7 @@ var _App = function (_BaseComponent) {
     var _this = _possibleConstructorReturn(this, (_App.__proto__ || Object.getPrototypeOf(_App)).apply(this, arguments));
 
     _this.config = {
-      pages: ['pages/index/index', 'pages/topic/topic', 'pages/catalog/catalog', 'pages/cart/cart', 'pages/ucenter/index/index', 'pages/search/search', 'pages/category/category'],
+      pages: ['pages/index/index', 'pages/topic/topic', 'pages/catalog/catalog', 'pages/cart/cart', 'pages/ucenter/index/index', 'pages/search/search', 'pages/category/category', 'pages/goods/goods'],
       window: {
         backgroundTextStyle: 'dark',
         navigationBarBackgroundColor: '#fff',

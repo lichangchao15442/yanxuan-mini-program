@@ -52,7 +52,7 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Index.__proto__ || Object.getPrototypeOf(Index)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "loopArray26", "loopArray27", "loopArray29", "$compid__15", "banner", "channel", "brandList", "newGoodsList", "hotGoodsList", "topicList", "categoryList"], _this.customComponents = ["AtSearchBar"], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Index.__proto__ || Object.getPrototypeOf(Index)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "loopArray17", "loopArray18", "loopArray20", "$compid__7", "banner", "channel", "brandList", "newGoodsList", "hotGoodsList", "topicList", "categoryList"], _this.customComponents = ["AtSearchBar"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Index, [{
@@ -71,10 +71,10 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__15"),
+      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__7"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__15 = _genCompid2[0],
-          $compid__15 = _genCompid2[1];
+          $prevCompid__7 = _genCompid2[0],
+          $compid__7 = _genCompid2[1];
 
       var props = this.__props;
 
@@ -114,7 +114,7 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
       };
       var anonymousState__temp = '\u5546\u54C1\u641C\u7D22\uFF0C\u5171' + goodsCount + '\u6B3E\u597D\u7269';
       this.anonymousFunc0 = onSearchValueChange;
-      var loopArray26 = newGoodsList.map(function (item, _anonIdx7) {
+      var loopArray17 = newGoodsList.map(function (item, _anonIdx7) {
         item = {
           $original: (0, _taroWeapp.internal_get_original)(item)
         };
@@ -124,7 +124,7 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
           $original: item.$original
         };
       });
-      var loopArray27 = hotGoodsList.map(function (item, _anonIdx9) {
+      var loopArray18 = hotGoodsList.map(function (item, _anonIdx9) {
         item = {
           $original: (0, _taroWeapp.internal_get_original)(item)
         };
@@ -134,7 +134,7 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
           $original: item.$original
         };
       });
-      var loopArray29 = categoryList.map(function (category, _anonIdx15) {
+      var loopArray20 = categoryList.map(function (category, _anonIdx15) {
         category = {
           $original: (0, _taroWeapp.internal_get_original)(category)
         };
@@ -157,13 +157,13 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
         "placeholder": anonymousState__temp,
         "value": searchValue,
         "onChange": this.anonymousFunc0
-      }, $compid__15, $prevCompid__15);
+      }, $compid__7, $prevCompid__7);
       Object.assign(this.__state, {
         anonymousState__temp: anonymousState__temp,
-        loopArray26: loopArray26,
-        loopArray27: loopArray27,
-        loopArray29: loopArray29,
-        $compid__15: $compid__15,
+        loopArray17: loopArray17,
+        loopArray18: loopArray18,
+        loopArray20: loopArray20,
+        $compid__7: $compid__7,
         banner: banner,
         channel: channel,
         brandList: brandList,

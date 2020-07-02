@@ -1,7 +1,7 @@
 <block wx:if="{{$taroCompReady}}">
     <view class="container">
         <navigator url="/pages/search/search">
-            <at-search-bar compid="{{$compid__15}}"></at-search-bar>
+            <at-search-bar compid="{{$compid__7}}"></at-search-bar>
         </navigator>
         <swiper style="height: 400rpx" indicator-color="#999" indicator-active-color="#333" circular="{{true}}" indicator-dots="{{true}}" autoplay="{{true}}">
             <swiper-item class="swiper-item" wx:for="{{banner}}" wx:for-item="item" wx:for-index="_anonIdx2">
@@ -28,7 +28,7 @@
             <view class="selection-title"><text>周一周四·新品首发</text>
             </view>
             <view class="at-row at-row--wrap news">
-                <view wx:key="id" class="at-col-6 new" wx:for="{{loopArray26}}" wx:for-item="item" wx:for-index="_anonIdx8">
+                <view wx:key="id" class="at-col-6 new" wx:for="{{loopArray17}}" wx:for-item="item" wx:for-index="_anonIdx8">
                     <image src="{{item.$original.listPicUrl}}"></image>
                     <view class="new-text"><text class="new-text-name">{{item.$original.name}}</text><text class="new-text-price">¥{{item.$loopState__temp3}}</text>
                     </view>
@@ -39,7 +39,7 @@
             <view class="selection-title"><text>人气推荐</text>
             </view>
             <view class="hots">
-                <view class="hot" wx:key="id" wx:for="{{loopArray27}}" wx:for-item="item" wx:for-index="_anonIdx10">
+                <view class="hot" wx:key="id" wx:for="{{loopArray18}}" wx:for-item="item" wx:for-index="_anonIdx10">
                     <image src="{{item.$original.listPicUrl}}"></image>
                     <view class="hot-text"><text class="hot-text-name">{{item.$original.name}}</text><text class="hot-text-brief">{{item.$original.goodsBrief}}</text><text class="hot-text-price">¥{{item.$loopState__temp5}}</text>
                     </view>
@@ -60,7 +60,7 @@
             </swiper>
         </view>
         <view>
-            <view class="selection m-category" wx:key="id" wx:for="{{loopArray29}}" wx:for-item="category" wx:for-index="_anonIdx16">
+            <view class="selection m-category" wx:key="id" wx:for="{{loopArray20}}" wx:for-item="category" wx:for-index="_anonIdx16">
                 <view class="selection-title"><text>{{category.$original.name}}</text>
                 </view>
                 <view class="at-row at-row--wrap categorys">

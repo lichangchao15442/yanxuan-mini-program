@@ -44,6 +44,7 @@ class App extends Component {
       'pages/ucenter/index/index',
       'pages/search/search',
       'pages/category/category',
+      'pages/goods/goods',
     ],
     window: {
       backgroundTextStyle: 'dark',
