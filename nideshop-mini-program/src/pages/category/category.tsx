@@ -28,20 +28,6 @@ const Category = (props: CategoryProps) => {
   // useRef
   const hasClickedTab = useRef(false) // 是否点击过分类tab
 
-  /** 进入页面，设置选中的tab */
-  // useEffect(() => {
-  //   // TODO: bug： goodsCategory每次请求都当作改变了
-  //   console.log('goodsCategory', goodsCategory)
-  //   let initIndex = 0
-  //   goodsCategory.map((item, index) => {
-  //     if (item.id === Number(id)) {
-  //       initIndex = index
-  //     }
-  //     return item
-  //   })
-  //   setCurrentTab(initIndex)
-  // }, [goodsCategory])
-
   useEffect(() => {
     if (goodsCategory.length) {
       // 生成tabList
@@ -52,7 +38,7 @@ const Category = (props: CategoryProps) => {
 
   useEffect(() => {
     const categoryId = goodsCategory.length ? goodsCategory[currentTab].id : id
-    // 判断是否点击过，如果没有点击则说明是进入页面默认选中的
+    // 进入页面，设置选中的tab
     if (!hasClickedTab.current) { setCurrentTab(findTabIndex(id)) }
 
     // 获取分类列表和当前分类

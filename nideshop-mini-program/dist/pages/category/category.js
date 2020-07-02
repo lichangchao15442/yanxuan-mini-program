@@ -56,7 +56,7 @@ var Category = (_temp2 = _class = function (_Taro$Component) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Category.__proto__ || Object.getPrototypeOf(Category)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray31", "$compid__17", "goodsList", "currentCategory"], _this.customComponents = ["AtTabs"], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Category.__proto__ || Object.getPrototypeOf(Category)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray33", "$compid__19", "goodsList", "currentCategory"], _this.customComponents = ["AtTabs"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Category, [{
@@ -75,10 +75,10 @@ var Category = (_temp2 = _class = function (_Taro$Component) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__17"),
+      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__19"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__17 = _genCompid2[0],
-          $compid__17 = _genCompid2[1];
+          $prevCompid__19 = _genCompid2[0],
+          $compid__19 = _genCompid2[1];
 
       var props = this.__props;
 
@@ -108,19 +108,6 @@ var Category = (_temp2 = _class = function (_Taro$Component) {
 
 
       var hasClickedTab = (0, _taroWeapp.useRef)(false); // 是否点击过分类tab
-      /** 进入页面，设置选中的tab */
-      // useEffect(() => {
-      //   // TODO: bug： goodsCategory每次请求都当作改变了
-      //   console.log('goodsCategory', goodsCategory)
-      //   let initIndex = 0
-      //   goodsCategory.map((item, index) => {
-      //     if (item.id === Number(id)) {
-      //       initIndex = index
-      //     }
-      //     return item
-      //   })
-      //   setCurrentTab(initIndex)
-      // }, [goodsCategory])
       (0, _taroWeapp.useEffect)(function () {
         if (goodsCategory.length) {
           // 生成tabList
@@ -132,7 +119,7 @@ var Category = (_temp2 = _class = function (_Taro$Component) {
       }, [goodsCategory]);
       (0, _taroWeapp.useEffect)(function () {
         var categoryId = goodsCategory.length ? goodsCategory[currentTab].id : id;
-        // 判断是否点击过，如果没有点击则说明是进入页面默认选中的
+        // 进入页面，设置选中的tab
         if (!hasClickedTab.current) {
           setCurrentTab(findTabIndex(id));
         }
@@ -180,7 +167,7 @@ var Category = (_temp2 = _class = function (_Taro$Component) {
         onSelectTab(index);
       };
 
-      var loopArray31 = goodsList.map(function (item, index) {
+      var loopArray33 = goodsList.map(function (item, index) {
         item = {
           $original: (0, _taroWeapp.internal_get_original)(item)
         };
@@ -200,10 +187,10 @@ var Category = (_temp2 = _class = function (_Taro$Component) {
         "scroll": true,
         "tabList": tabList,
         "onClick": this.anonymousFunc0
-      }, $compid__17, $prevCompid__17);
+      }, $compid__19, $prevCompid__19);
       Object.assign(this.__state, {
-        loopArray31: loopArray31,
-        $compid__17: $compid__17,
+        loopArray33: loopArray33,
+        $compid__19: $compid__19,
         goodsList: goodsList,
         currentCategory: currentCategory
       });
