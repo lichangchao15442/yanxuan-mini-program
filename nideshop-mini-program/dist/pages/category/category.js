@@ -56,7 +56,7 @@ var Category = (_temp2 = _class = function (_Taro$Component) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Category.__proto__ || Object.getPrototypeOf(Category)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray33", "$compid__19", "goodsList", "currentCategory"], _this.customComponents = ["AtTabs"], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Category.__proto__ || Object.getPrototypeOf(Category)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray53", "$compid__39", "goodsList", "currentCategory"], _this.customComponents = ["AtTabs"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Category, [{
@@ -75,10 +75,10 @@ var Category = (_temp2 = _class = function (_Taro$Component) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__19"),
+      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__39"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__19 = _genCompid2[0],
-          $compid__19 = _genCompid2[1];
+          $prevCompid__39 = _genCompid2[0],
+          $compid__39 = _genCompid2[1];
 
       var props = this.__props;
 
@@ -167,7 +167,7 @@ var Category = (_temp2 = _class = function (_Taro$Component) {
         onSelectTab(index);
       };
 
-      var loopArray33 = goodsList.map(function (item, index) {
+      var loopArray53 = goodsList.map(function (item, index) {
         item = {
           $original: (0, _taroWeapp.internal_get_original)(item)
         };
@@ -187,10 +187,10 @@ var Category = (_temp2 = _class = function (_Taro$Component) {
         "scroll": true,
         "tabList": tabList,
         "onClick": this.anonymousFunc0
-      }, $compid__19, $prevCompid__19);
+      }, $compid__39, $prevCompid__39);
       Object.assign(this.__state, {
-        loopArray33: loopArray33,
-        $compid__19: $compid__19,
+        loopArray53: loopArray53,
+        $compid__39: $compid__39,
         goodsList: goodsList,
         currentCategory: currentCategory
       });

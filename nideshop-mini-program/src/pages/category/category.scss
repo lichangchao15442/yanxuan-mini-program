@@ -1,6 +1,7 @@
 
 .my-at-tabs {
   position: fixed;
+  height: auto;
   z-index: 1000;
   .at-tabs__header {
     border-top: 4px solid rgba(0,0,0,.15);

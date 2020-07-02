@@ -1,12 +1,12 @@
 <block wx:if="{{$taroCompReady}}">
     <view class="container">
-        <at-tabs compid="{{$compid__19}}"></at-tabs>
+        <at-tabs compid="{{$compid__39}}"></at-tabs>
         <view class="goods-title">
             <view class="goods-title-name">{{currentCategory.name}}</view>
             <view class="goods-title-frontName">{{currentCategory.frontName}}</view>
         </view>
         <view class="goods-list">
-            <navigator class="{{item.$loopState__temp2}}" wx:key="id" url="{{'/pages/goods/goods?id=' + item.$original.id}}" wx:for="{{loopArray33}}" wx:for-item="item" wx:for-index="index">
+            <navigator class="{{item.$loopState__temp2}}" wx:key="id" url="{{'/pages/goods/goods?id=' + item.$original.id}}" wx:for="{{loopArray53}}" wx:for-item="item" wx:for-index="index">
                 <image src="{{item.$original.listPicUrl}}" mode="aspectFit"></image>
                 <view class="goods-item-name" style="{{item.$loopState__temp4}}"><text class="text-ellipsis">{{item.$original.name}}</text>
                 </view><text class="goods-item-price">¥ {{item.$loopState__temp6}}</text>

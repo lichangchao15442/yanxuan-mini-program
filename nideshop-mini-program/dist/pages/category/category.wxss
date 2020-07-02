@@ -1,5 +1,6 @@
 .my-at-tabs {
   position: fixed;
+  height: auto;
   z-index: 1000;
 }
 .my-at-tabs .at-tabs__header {
